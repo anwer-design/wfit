@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WFIT — Train Smarter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">W<span>FIT</span></div>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#exercises">Exercises</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <p class="hero-tag">🔥 Your personal trainer</p>
+      <h1>TRAIN<br><span>SMARTER.</span></h1>
+      <p class="hero-sub">Tap any muscle on the body map — get targeted exercises instantly.</p>
+      <div class="hero-cta">
+        <a href="#exercises" class="btn-primary">Explore Exercises ↓</a>
+        <a href="#exercises" class="btn-ghost">Explore Muscles ↓</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>50+</strong><span>Exercises</span></div>
+        <div><strong>10</strong><span>Muscle Groups</span></div>
+        <div><strong>Free</strong><span>Forever</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="glow-ring"></div>
+    </div>
+  </section>
+
+  <!-- EXERCISES SECTION -->
+  <section id="exercises" class="exercises">
+    <div class="section-header">
+      <h2>SELECT A MUSCLE</h2>
+      <p>Tap any highlighted area on the body to see exercises</p>
+    </div>
+
+    <div class="body-wrapper">
+      <div class="muscle-legend">
+        <h4>Muscle Groups</h4>
+        <ul id="legend-list">
+          <li data-muscle="chest"><span class="dot"></span> Chest</li>
+          <li data-muscle="shoulders"><span class="dot"></span> Shoulders</li>
+          <li data-muscle="abs"><span class="dot"></span> Abs</li>
+          <li data-muscle="biceps"><span class="dot"></span> Biceps</li>
+          <li data-muscle="triceps"><span class="dot"></span> Triceps</li>
+          <li data-muscle="forearms"><span class="dot"></span> Forearms</li>
+          <li data-muscle="back"><span class="dot"></span> Back</li>
+          <li data-muscle="legs"><span class="dot"></span> Legs</li>
+        </ul>
+      </div>
+
+      <div class="body-container">
+        <svg id="body-svg"
+             viewBox="0 0 2000 1742"
+             xmlns="http://www.w3.org/2000/svg"
+             xmlns:xlink="http://www.w3.org/1999/xlink">
+          <image href="body-full.png" x="0" y="0"
+                 width="2000" height="1742"
+                 preserveAspectRatio="xMidYMid meet"/>
+          <!-- FRONT translate(-0.3,-1.0) scale(0.52) -->
+          <g transform="translate(-0.3,-1.0) scale(0.52)">
+            <path class="muscle" data-muscle="shoulders" d="M1174 622L1102 652L1226 694L1320 756L1372 834V856L1422 928L1434 876V770L1382 672L1304 608L1250 622H1174Z"/>
+            <path class="muscle" data-muscle="shoulders" d="M740 622L824 652L768 672L672 712L596 770L574 808L560 856L502 920L494 770L548 672L624 608L654 622H740Z"/>
+            <path class="muscle" data-muscle="chest" d="M1230 706L1102 660L1006 714L984 782L994 1040L1014 1068L1152 1058L1204 1040L1262 970L1294 894L1330 854H1370L1360 830L1312 758L1230 706Z"/>
+            <path class="muscle" data-muscle="chest" d="M674 714L834 660L924 714L948 782L934 1040L924 1068L764 1058L694 1016L644 916L608 854H564L596 782L674 714Z"/>
+            <path class="muscle" data-muscle="abs" d="M904 1078H806V1454L894 1630H1042L1124 1454V1078H1028H904Z"/>
+            <path class="muscle" data-muscle="biceps" d="M1482 1208L1502 1278V1290L1440 1222V1194L1380 1118L1346 1036L1332 968L1312 898L1332 862H1366L1430 936L1456 980L1470 1058L1482 1208Z"/>
+            <path class="muscle" data-muscle="biceps" d="M560 862L508 922L480 980L464 1058L448 1214L440 1278L492 1222L508 1176L576 1080L602 1010L620 922L602 862H560Z"/>
+            <path class="muscle" data-muscle="triceps" d="M1376 1122L1388 1158L1376 1194L1340 1108V1066L1322 1026L1312 976L1296 910L1312 880V940L1332 994L1354 1074L1376 1122Z"/>
+            <path class="muscle" data-muscle="triceps" d="M588 1096L560 1194L536 1158L550 1122L600 1016L616 940V880L636 910L616 1016L588 1066V1096Z"/>
+            <path class="muscle" data-muscle="forearms" d="M1562 1210L1476 1062L1490 1210L1514 1278L1502 1298L1402 1192L1392 1262L1422 1368L1476 1492L1590 1682L1686 1638L1640 1492L1604 1352L1562 1210Z"/>
+            <path class="muscle" data-muscle="forearms" d="M540 1246L526 1192L500 1228L454 1278L434 1270L454 1062L374 1192L324 1342L292 1474L246 1638L344 1682L440 1512L526 1320L540 1246Z"/>
+            <path class="muscle" data-muscle="legs" d="M1290 1490L1276 1422L1224 1490L1172 1522L1122 1578L1012 1668L924 1680L840 1614L740 1522L702 1490L654 1422L640 1490L654 1522L640 1654V1862L670 2036L756 2248V2320L726 2420L708 2558V2672L766 2868L820 2854H862L886 2736L912 2618L924 2570V2474L912 2374L924 2328L940 1756L952 1680H968L986 1712L996 2328L1012 2374L1002 2474V2570L1012 2618L1044 2736L1060 2854H1114L1160 2868L1216 2672L1228 2558L1206 2420L1172 2320V2248L1256 2036L1290 1862V1654L1276 1522L1290 1490Z"/>
+          </g>
+          <!-- BACK translate(1.5,-1.0) scale(0.52) -->
+          <g transform="translate(1.5,-1.0) scale(0.52)">
+            <path class="muscle" data-muscle="shoulders" d="M3188 778L3152 798L3172 850L3222 896L3302 970L3420 1032L3430 986L3420 850L3396 778L3348 732L3256 778H3188Z"/>
+            <path class="muscle" data-muscle="shoulders" d="M2620 986L2524 1032L2512 914L2524 840L2558 758L2602 732L2662 758L2708 778H2778L2796 810L2778 850L2708 914L2620 986Z"/>
+            <path class="muscle" data-muscle="back" d="M2666 676L2624 710L2776 762L2796 774L2806 804L2776 858L2686 944L2676 1174L2686 1250L2738 1354L2716 1434L2726 1462L2748 1444L2796 1434L2856 1462L2886 1504H3060L3112 1444L3176 1434L3226 1462L3212 1354L3226 1320L3258 1250L3268 1144L3258 944L3136 822L3160 762L3226 746L3328 710L3292 676L3186 636L3092 612L3060 574H2886L2844 612L2764 636L2666 676Z"/>
+            <path class="muscle" data-muscle="biceps" d="M2548 1222L2558 1292L2536 1272L2508 1222V1180V1116L2522 1040L2608 1002V1030L2584 1078V1096V1150L2572 1180L2536 1212L2548 1222Z"/>
+            <path class="muscle" data-muscle="biceps" d="M3340 1030V1002L3424 1040L3442 1116V1190L3424 1256L3390 1292L3410 1212L3378 1190L3364 1150V1078L3340 1030Z"/>
+            <path class="muscle" data-muscle="triceps" d="M3328 1018L3316 990L3264 946L3278 1192L3302 1274L3338 1320L3328 1256V1214L3338 1192L3352 1166L3364 1140V1106L3352 1054L3328 1018Z"/>
+            <path class="muscle" data-muscle="triceps" d="M2620 1018L2630 990L2680 954L2672 1140L2662 1214L2642 1274L2610 1320L2620 1256V1214L2604 1174L2588 1140V1080L2610 1034L2620 1018Z"/>
+            <path class="muscle" data-muscle="forearms" d="M3568 1664L3494 1700L3414 1576L3360 1460L3334 1366L3344 1334L3374 1322L3394 1294L3424 1272L3450 1304L3480 1366L3504 1460L3518 1534L3538 1576L3554 1636L3568 1664Z"/>
+            <path class="muscle" data-muscle="forearms" d="M2554 1294L2524 1272L2484 1322L2468 1380L2440 1474L2428 1534L2410 1576L2380 1664L2454 1700L2514 1598L2576 1486L2604 1414L2614 1366L2604 1334L2576 1322L2554 1294Z"/>
+            <path class="muscle" data-muscle="legs" d="M2782 1456L2728 1470L2708 1496L2688 1536L2674 1624L2688 1676V1712L2698 1862L2708 1980L2738 2062L2772 2142L2760 2210L2772 2278L2744 2360L2738 2406V2524L2758 2592L2782 2640V2714L2802 2802L2834 2918L2848 3026H2920V2896L2928 2760L2920 2640L2928 2604L2954 2478L2940 2374L2910 2302L2928 2264L2920 2186L2928 2080L2954 1934V1774H3000L2990 1890L3000 1980L3020 2072L3034 2158L3020 2210V2264L3034 2294L3020 2336L2990 2440L3000 2550L3020 2624V2802L3034 3026H3098L3124 2882L3160 2734L3170 2640L3200 2566L3218 2406L3200 2352L3182 2294V2264V2142L3218 2050L3248 1902L3256 1784V1676L3276 1624L3264 1562L3248 1506L3218 1470L3164 1456L3106 1470L3072 1506L3042 1562L3006 1624L2976 1682L2920 1592L2902 1546L2866 1496L2838 1470L2782 1456Z"/>
+          </g>
+        </svg>
+        <div class="body-hint">&#8593; Tap a muscle group</div>
+      </div>
+      </div>
+
+      <div class="muscle-info-panel" id="info-panel">
+        <div class="info-placeholder">
+          <div class="placeholder-icon">💪</div>
+          <p>Select a muscle group<br>to see exercises</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">W<span>FIT</span></div>
+        <p>Train smarter, not harder.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#hero">Home</a>
+        <a href="#exercises">Exercises</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-contact">
+        <p class="footer-contact-title">CONTACT</p>
+        <a href="mailto:anoir.gharsalli@enetcom.u-sfax.tn" class="footer-email">
+          ✉ anoir.gharsalli@enetcom.u-sfax.tn
+        </a>
+      </div>
+      <p class="footer-copy">© 2026 Wfit. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- EXERCISE MODAL -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modal-close">✕</button>
+      <div class="modal-header">
+        <h3 id="modal-title">Chest Exercises</h3>
+        <span id="modal-count"></span>
+      </div>
+      <div class="modal-body" id="modal-body"></div>
+
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
